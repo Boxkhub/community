@@ -28,7 +28,7 @@ document.write(`
                 <a href="https://t.me/boxk_chat", target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 BOXK Modding. All mods are for games that we don't own.</p>
+                <p>&copy; 2025 BOXK Community. Բոլոր նյութերը ուսումնասիրական նպատակներով են</p>
             </div>
         </div>
     </footer>
@@ -145,4 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	searchInput.disabled = false;
 	
 	checkVisibleCards();
+
 });
