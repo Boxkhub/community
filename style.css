@@ -59,7 +59,7 @@ main {
 }
 
 .logo h1 {
-    font-size: 1.9rem;
+    font-size: calc(1rem + 1vw);
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 5px;
@@ -386,5 +386,6 @@ main {
 }
 
 /* ====== КОНЕЦ СТИЛЕЙ ДЛЯ СООБЩЕНИЯ ====== */
+
 
 
