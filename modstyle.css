@@ -1,0 +1,233 @@
+.mod-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.mod-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.mod-cover {
+    position: relative; /* <--- Needed to contain absolutely positioned children */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: 350px;
+    border: 1px solid var(--white-stripe);
+}
+
+/* Make all images in .mod-cover stack */
+.mod-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top image (sharp) */
+.mod-cover img:not(.blur) {
+    object-fit: scale-down;
+    z-index: 1;
+}
+
+/* Background image (blurred) */
+.mod-cover img.blur {
+    object-fit: cover;
+    filter: blur(5px) brightness(50%);
+    z-index: 0;
+    transform: scale(1.1); /* Optional: helps hide the blur edges */
+}
+
+.mod-video {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    height: 350px;
+    border: 1px solid var(--white-stripe);
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+.mod-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mod-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.mod-info a {
+    color: var(--darker-bg);
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.actions {
+    margin-bottom: 25px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
+
+.download-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+.author {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.author a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mod-media {
+    margin-bottom: 50px;
+}
+
+.mod-media h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+}
+
+.media-item {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 260px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    border: 1px solid var(--white-stripe);
+    margin-top: 10px;
+}
+
+.media-item:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+.media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mod-description {
+    margin-bottom: 50px;
+}
+
+.mod-description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.mod-description p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.mod-description h3 {
+    font-size: 1.2rem;
+    margin: 25px 0 15px;
+}
+
+.mod-description ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.mod-description li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .mod-header {
+        grid-template-columns: 1fr;
+    }
+    
+    .mod-cover {
+        height: 300px;
+    }
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+a {
+    color: var(--accent-color);
+}
