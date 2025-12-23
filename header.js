@@ -12,9 +12,10 @@ document.write(`
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="active">Մոդեր</a></li>
-                    <li><a href="https://boxkhub.github.io/boxkastan/" target="_blank">Սերվեր <span class="fas fa-external-link-alt"></span></a></li>
+                    <li><a href="https://boxkhub.github.io/boxkastan/" target="_blank">Boxkastan <span class="fas fa-external-link-alt"></span></a></li>
                 </ul>
             </nav>
         </div>
     </header>
 `)
+
